@@ -9,6 +9,8 @@
         <Compile Include="Parsing\Configuration.fs" />
         <Compile Include="Program.fs" />
         <Folder Include="Utils" />
+        <Content Include="examples\configuration.yml" />
+        <Content Include="examples\docker-compose.yml" />
     </ItemGroup>
 
     <ItemGroup>

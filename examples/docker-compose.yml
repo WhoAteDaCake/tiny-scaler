@@ -1,0 +1,8 @@
+version: '2'
+services:
+  hello_world:
+    image: ubuntu
+    command: [/bin/sleep, 20000]
+  hello_world2:
+    image: ubuntu
+    command: [/bin/sleep, 200000]
