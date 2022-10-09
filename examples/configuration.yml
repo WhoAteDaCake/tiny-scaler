@@ -1,7 +1,7 @@
 shared:
   # How often should you poll to check whether a system should be scaled
   # in seconds
-  pool_window: 10
+  poolWindow: 10
   
 components:
   - name: "runner"
