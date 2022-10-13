@@ -11,6 +11,8 @@
     </PropertyGroup>
     
     <ItemGroup>
+        <Compile Include="Providers\Provider.fs" />
+        <Compile Include="Providers\Docker.fs" />
         <Compile Include="Parsing\Configuration.fs" />
         <Content Include="examples\configuration.yml" />
         <Content Include="examples\docker-compose.yml" />
@@ -20,8 +22,7 @@
         <Compile Include="Configuration\State.fs" />
         <Compile Include="Configuration\Arguments.fs" />
         <Compile Include="Program.fs" />
-        <Folder Include="Docker" />
-        <Content Include="appsettings.xml" />
+        <Compile Include="Utilities\Execute.fs" />
     </ItemGroup>
 
     <ItemGroup>

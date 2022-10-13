@@ -2,10 +2,10 @@ version: '2'
 
 services:
   hello_world:
-    image: ubuntu
+    image: alpine
     entrypoint: /bin/sleep
     command: "20000"
   hello_world2:
-    image: ubuntu
+    image: alpine
     entrypoint: /bin/sleep
     command: "20000"
