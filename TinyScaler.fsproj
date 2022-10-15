@@ -11,6 +11,7 @@
     </PropertyGroup>
     
     <ItemGroup>
+        <Compile Include="Utilities\Execute.fs" />
         <Compile Include="Providers\Provider.fs" />
         <Compile Include="Providers\Docker.fs" />
         <Compile Include="Parsing\Configuration.fs" />
@@ -22,7 +23,6 @@
         <Compile Include="Configuration\State.fs" />
         <Compile Include="Configuration\Arguments.fs" />
         <Compile Include="Program.fs" />
-        <Compile Include="Utilities\Execute.fs" />
     </ItemGroup>
 
     <ItemGroup>

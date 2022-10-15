@@ -6,9 +6,10 @@ open System.Threading.Tasks
 
 type CommandResult = Result<string, int * string>
 
-let command executable args : Async<CommandResult> =
+let command dir executable args : Async<CommandResult> =
   async {
     let startInfo = ProcessStartInfo()
+    startInfo.WorkingDirectory <- dir
     startInfo.FileName <- executable
     for a in args do
       startInfo.ArgumentList.Add(a)
@@ -34,5 +35,5 @@ let command executable args : Async<CommandResult> =
         Result.Ok out.[0]
   }
 
-let shellCommand cmd =
-  command "/usr/bin/env" [ "-S"; "bash"; "-c"; cmd ]
+let shellCommand dir cmd =
+  command dir "/usr/bin/env" [ "-S"; "bash"; "-c"; cmd ]

@@ -6,5 +6,5 @@ type Component = {
 }
 
 type State =
-    abstract member Current: unit -> Component[]
+    abstract member Current: unit -> Result<Component[], 'a>
 
