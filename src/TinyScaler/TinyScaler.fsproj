@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Configuration\State.fs" />
+        <Compile Include="Configuration\Arguments.fs" />
+        <Folder Include="Docker" />
+        <Compile Include="Parsing\Configuration.fs" />
+        <Compile Include="Providers\Provider.fs" />
+        <Compile Include="Providers\Docker.fs" />
+        <Compile Include="Utilities\Execute.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+</Project>
