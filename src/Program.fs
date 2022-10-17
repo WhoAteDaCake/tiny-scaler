@@ -30,11 +30,10 @@ let main args =
     match outcome with
     | Ok dir ->
         // Handle the directory
-        let runner = Docker.DockerCommand dir
-        let output = runner.Read() |> Async.RunSynchronously
+        let runner = Docker.composePs dir
+        let output = Docker.state runner |> Async.RunSynchronously
         match output with
         | Ok data ->
-            do Console.WriteLine("Success!")
             do Console.WriteLine(data)
             0
         | Error err ->
