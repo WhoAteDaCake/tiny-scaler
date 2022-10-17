@@ -1,10 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <!--<PublishSingleFile>true</PublishSingleFile>
+        <SelfContained>true</SelfContained>
+        <PublishReadyToRun>true</PublishReadyToRun>
+        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+        <PublishTrimmed>true</PublishTrimmed> -->
     </PropertyGroup>
-
+    
     <ItemGroup>
         <Compile Include="Configuration\State.fs" />
         <Compile Include="Configuration\Arguments.fs" />
@@ -16,4 +21,11 @@
         <Compile Include="Program.fs" />
     </ItemGroup>
 
+    <ItemGroup>
+        <PackageReference Include="Argu" Version="6.1.1" />
+        <PackageReference Include="FSharp.Configuration" Version="2.0.0" />
+        <PackageReference Include="FsToolkit.ErrorHandling" Version="2.13.0" />
+        <PackageReference Include="Legivel" Version="0.4.6" />
+    </ItemGroup>
+    
 </Project>
