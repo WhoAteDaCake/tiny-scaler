@@ -9,3 +9,5 @@ services:
     image: alpine
     entrypoint: /bin/sleep
     command: "20000"
+    ports:
+      - '3002:3002'

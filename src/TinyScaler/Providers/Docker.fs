@@ -1,27 +1,30 @@
 module TinyScaler.Providers.Docker
 
 open System
+open System.Text.Json
 open TinyScaler.Utilities
-open Legivel.Customization
-open TinyScaler.Providers
+open FSharp.Json
 open FsToolkit.ErrorHandling
 
-//          Name                 Command        State   Ports
-// ----------------------------------------------------------
-// examples_hello_world2_1   /bin/sleep 20000   Up           
-// examples_hello_world_1    /bin/sleep 20000   Up 
+type Container = {
+    Service: string
+    State: string 
+}
 
-let composePs directory () =
-    Execute.command directory "docker-compose" ["ps"]
+let parseContainers (raw: string) = Json.deserialize<Container[]> raw 
 
-let componentOfRow (row: string) =
-    let name = row.Substring(row.IndexOf("-"), row.LastIndexOf("-"))
-    let count = Int32.Parse(row.Substring(row.LastIndexOf("-")))
-    (name, count)
+let composePs directory () = asyncResult {
+    let! raw = Execute.command directory "docker-compose" ["ps"; "a"; "--format"; "json"]
+    return parseContainers raw
+}
+
+// let containersToComponents (ls: Container[]) =
+    
+    
 
 let state (executor: unit -> Async<Execute.CommandResult>) =
     let raw = asyncResult {
         let! raw = executor ()
         return raw
     }
-    state
+    raw

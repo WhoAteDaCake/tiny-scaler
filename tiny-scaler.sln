@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{340A4D16-7F3
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TinyScaler", "src\TinyScaler\TinyScaler.fsproj", "{C148D8A1-B27F-4EC4-B77B-C710E70E62A0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9F4B3616-1B3F-4107-8136-304917C9A192}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TinyScalerTests", "test\TinyScalerTests\TinyScalerTests.fsproj", "{156CBB8B-F50F-4FF3-9389-94DDEA98E582}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +21,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C148D8A1-B27F-4EC4-B77B-C710E70E62A0} = {340A4D16-7F35-4DE2-9B24-1DC305647B42}
+		{156CBB8B-F50F-4FF3-9389-94DDEA98E582} = {9F4B3616-1B3F-4107-8136-304917C9A192}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C148D8A1-B27F-4EC4-B77B-C710E70E62A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C148D8A1-B27F-4EC4-B77B-C710E70E62A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C148D8A1-B27F-4EC4-B77B-C710E70E62A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C148D8A1-B27F-4EC4-B77B-C710E70E62A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{156CBB8B-F50F-4FF3-9389-94DDEA98E582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156CBB8B-F50F-4FF3-9389-94DDEA98E582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156CBB8B-F50F-4FF3-9389-94DDEA98E582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156CBB8B-F50F-4FF3-9389-94DDEA98E582}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

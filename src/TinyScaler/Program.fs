@@ -30,14 +30,14 @@ let main args =
     match outcome with
     | Ok dir ->
         // Handle the directory
-        let runner = Docker.composePs dir
-        let output = Docker.state runner |> Async.RunSynchronously
-        match output with
-        | Ok data ->
-            do Console.WriteLine(data)
-            0
-        | Error err ->
-         do Console.WriteLine(err)
+        // let runner = Docker.composePs dir
+        // let output = Docker.state runner |> Async.RunSynchronously
+        // match output with
+        // | Ok data ->
+        //     do Console.WriteLine(data)
+        //     0
+        // | Error err ->
+        //  do Console.WriteLine(err)
          1
     | Error err ->
          do Console.WriteLine(err)

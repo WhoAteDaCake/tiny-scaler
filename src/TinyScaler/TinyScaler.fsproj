@@ -11,19 +11,20 @@
     </PropertyGroup>
     
     <ItemGroup>
+        <Compile Include="Utilities\Execute.fs" />
         <Compile Include="Configuration\State.fs" />
         <Compile Include="Configuration\Arguments.fs" />
         <Folder Include="Docker" />
         <Compile Include="Parsing\Configuration.fs" />
         <Compile Include="Providers\Provider.fs" />
         <Compile Include="Providers\Docker.fs" />
-        <Compile Include="Utilities\Execute.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Argu" Version="6.1.1" />
         <PackageReference Include="FSharp.Configuration" Version="2.0.0" />
+        <PackageReference Include="FSharp.Json" Version="0.4.1" />
         <PackageReference Include="FsToolkit.ErrorHandling" Version="2.13.0" />
         <PackageReference Include="Legivel" Version="0.4.6" />
     </ItemGroup>
