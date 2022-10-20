@@ -27,6 +27,7 @@
         <PackageReference Include="FSharp.Json" Version="0.4.1" />
         <PackageReference Include="FsToolkit.ErrorHandling" Version="2.13.0" />
         <PackageReference Include="Legivel" Version="0.4.6" />
+        <PackageReference Include="Snapshooter.Xunit" Version="0.7.1" />
     </ItemGroup>
     
 </Project>

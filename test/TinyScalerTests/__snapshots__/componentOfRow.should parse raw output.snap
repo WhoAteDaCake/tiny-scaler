@@ -1,0 +1,14 @@
+﻿[
+  {
+    "Service": "hello_world",
+    "State": "running"
+  },
+  {
+    "Service": "hello_world",
+    "State": "running"
+  },
+  {
+    "Service": "hello_world2",
+    "State": "running"
+  }
+]
